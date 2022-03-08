@@ -13,6 +13,11 @@ package groovylab
 
 class Task07 {
     public static String encryptThis(String s) {
-        throw UnsupportedOperationException('Not Implemented!')
+        def encrypt = ""
+        def words = s.split(" ")
+        for (word in words){
+            encrypt += (int)word[0] + word[-1] + word[2..-2] + word[1] + " "
+        }
+        return encrypt.trim()
     }
 }

@@ -7,6 +7,10 @@ package groovylab
 
 class Task06 {
     public static Map adults(Map people) {
-        throw UnsupportedOperationException('Not Implemented!')
+        def abultsMap = [:]
+        people.each {key, value -> 
+            if (value >= 18) {abultsMap.put(key, value)}
+        }
+       return abultsMap 
     }
 }
